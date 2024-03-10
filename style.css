@@ -1,0 +1,40 @@
+.carousel {
+    width: 500px; /* Adjust width as needed */
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+}
+
+.slide {
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 500px; /* Width of individual slides */
+    transition: transform 0.4s ease-in-out;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.prev {
+    left: 10px; 
+}
+
+.next {
+    right: 10px;
+}
+
+/* Hide all slides except the first */
+.slide:not(.active) {
+    display: none;
+}
